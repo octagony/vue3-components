@@ -1,3 +1,3 @@
 <template>
-  <div>Button</div>
+  <div>Modal</div>
 </template>
