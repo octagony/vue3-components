@@ -1,8 +1,20 @@
 <script setup lang="ts">
-import { computed, reactive, ref } from 'vue'
-import Button from './components/Button/Button.vue'
+import Tooltip from './components/Tooltip/Tooltip.vue'
 </script>
 
 <template>
-  <Button label="Submit" size="lg" type="warning" raised />
+  <div class="container">
+    <Tooltip position="top" :timer="2000">
+      <template #tooltip-inner>Click me</template>
+      <template #tooltip-content>Успешно скопировано!</template>
+    </Tooltip>
+  </div>
 </template>
+
+<style>
+.container {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+}
+</style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { IButton } from './IButton.interface.ts'
+import { IButton } from './IButton.interface'
 
 const props = defineProps<IButton>()
 
