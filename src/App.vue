@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import Tooltip from './components/Tooltip/Tooltip.vue'
+import { ref } from 'vue'
+import Rating from './components/Rating/Rating.vue'
+
+const rating = ref(8)
 </script>
 
 <template>
   <div class="container">
-    <Tooltip position="top" :timer="2000">
-      <template #tooltip-inner>Click me</template>
-      <template #tooltip-content>Успешно скопировано!</template>
-    </Tooltip>
+    <Rating v-model="rating" :maxStars="10" />
+    {{ rating }}
   </div>
 </template>
 
