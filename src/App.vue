@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Checkbox from './components/Checkbox/Checkbox.vue'
-
-const check = ref(true);
+import Rating from './components/Rating/Rating.vue'
+const rating = ref(8)
 </script>
 
 <template>
   <div class="container">
-    <Checkbox v-model="check" />
-          {{check}}
+    <Rating v-model="rating" :maxStars="10" />
+    {{ rating }}
   </div>
 </template>
 
