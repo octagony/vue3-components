@@ -8,8 +8,8 @@ const props = defineProps({
   }
 })
 
-const update = (event) => {
-  emits('update:modelValue', event.target.checked)
+const update = (event: Event) => {
+  emits('update:modelValue', (event?.target as HTMLInputElement).checked)
 }
 </script>
 

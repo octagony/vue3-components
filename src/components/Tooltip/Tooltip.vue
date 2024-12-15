@@ -17,8 +17,8 @@ const startVisibilityTimeout = () => {
   setTimeout(() => (data.isShow = false), props.timer)
 }
 
-const clickOutsideHandler = (event) => {
-  if (data.isShow && !event?.target.closest('.tooltip')) {
+const clickOutsideHandler = (event: Event) => {
+  if (data.isShow && !(event?.target as HTMLDivElement).closest('.tooltip')) {
     toggleVisibility()
   }
 }
