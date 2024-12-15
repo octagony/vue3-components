@@ -1,7 +1,27 @@
 {
-  "name": "vue3-components",
-  "version": "0.0.0",
-  "private": true,
+  "name": "vue-3-simple-component",
+  "version": "0.0.3",
+  "description": "Test Vue3 Component library",
+  "main": "./dist/vue-3-simple-component.umd.js",
+  "module": "./dist/vue-3-simple-component.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-3-simple-component.mjs",
+      "require": "./dist/vue-3-simple-component.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "library"
+  ],
+  "author": "Octagony",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -32,6 +52,7 @@
     "tailwindcss": "^3.3.5",
     "typescript": "~5.2.0",
     "vite": "^4.4.11",
+    "vite-plugin-dts": "^4.3.0",
     "vue-tsc": "^1.8.19"
   }
 }
